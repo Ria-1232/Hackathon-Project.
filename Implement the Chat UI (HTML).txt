@@ -1,0 +1,11 @@
+<div id="messages-container">
+  <!-- Messages will appear here -->
+</div>
+
+<form id="message-form">
+  <input type="text" id="message-input" placeholder="Type a message" required />
+  <button type="submit">Send</button>
+</form>
+
+<script src="js/firebase-config.js"></script>
+<script src="js/main.js"></script>

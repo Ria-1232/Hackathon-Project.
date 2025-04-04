@@ -1,0 +1,4 @@
+/groups/{groupId}/messages/{messageId}:
+  - sender: "userId_1"
+  - message: "Hello!"
+  - timestamp: "2025-04-04T10:30:00Z"

@@ -1,0 +1,12 @@
+/users/{userId}:
+  - email: "user@example.com"
+  - displayName: "John Doe"
+/groups/{groupId}:
+  - name: "Math Study Group"
+  - description: "A group for studying Math 101"
+  - members: [userId_1, userId_2]
+  - messages: 
+    - messageId_1:
+        - sender: "userId_1"
+        - message: "Hey, let's meet tomorrow"
+        - timestamp: "2025-04-04T10:30:00Z"

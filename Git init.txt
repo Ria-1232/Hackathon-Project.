@@ -1,0 +1,6 @@
+git init  # Initialize Git
+git add .  # Add all files
+git commit -m "Initial commit"  # Commit changes
+git branch -M main  # Create and switch to the main branch
+git remote add origin https://github.com/your-username/campus-connect.git  # Link to GitHub repo
+git push -u origin main  # Push the changes to GitHub

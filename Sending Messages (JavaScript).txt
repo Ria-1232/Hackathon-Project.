@@ -1,0 +1,16 @@
+// Send message to Firestore
+const sendMessage = (groupId, messageContent) => {
+  const message = {
+    sender: firebase.auth().currentUser.uid,
+    message: messageContent,
+    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+  };
+
+  db.collection("groups").doc(groupId).collection("messages").add(message)
+    .then(() => {
+      console.log("Message sent!");
+    })
+    .catch(error => {
+      console.error("Error sending message:", error);
+    });
+};

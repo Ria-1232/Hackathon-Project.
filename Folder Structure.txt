@@ -1,0 +1,14 @@
+campus-connect/
+├── index.html
+├── login.html
+├── register.html
+├── dashboard.html
+├── css/
+│   └── styles.css
+├── js/
+│   ├── auth.js
+│   ├── main.js
+│   └── firebase-config.js
+├── assets/
+│   └── logo.png (optional)
+├── README.md

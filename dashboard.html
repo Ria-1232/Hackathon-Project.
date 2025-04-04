@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Campus Connect</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Campus Connect, <span id="user-name"></span></h1>
+    <nav>
+      <a href="create-group.html">Create New Group</a> |
+      <a href="logout.html">Logout</a>
+    </nav>
+  </header>
+  
+  <main>
+    <h2>Your Study Groups</h2>
+    <div id="group-list">
+      <!-- Dynamically filled with user groups -->
+    </div>
+  </main>
+
+  <script src="js/firebase-config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

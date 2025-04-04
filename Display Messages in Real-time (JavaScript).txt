@@ -1,0 +1,21 @@
+// Listen for new messages in the group
+const listenForMessages = (groupId) => {
+  const messagesRef = db.collection("groups").doc(groupId).collection("messages")
+    .orderBy("timestamp");
+
+  messagesRef.onSnapshot(snapshot => {
+    const messagesContainer = document.getElementById("messages-container");
+    messagesContainer.innerHTML = ""; // Clear current messages
+
+    snapshot.forEach(doc => {
+      const messageData = doc.data();
+      const messageElement = document.createElement("div");
+      messageElement.classList.add("message");
+      messageElement.innerHTML = `
+        <p><strong>${messageData.sender}</strong>: ${messageData.message}</p>
+        <span>${new Date(messageData.timestamp.seconds * 1000).toLocaleTimeString()}</span>
+      `;
+      messagesContainer.appendChild(messageElement);
+    });
+  });
+};

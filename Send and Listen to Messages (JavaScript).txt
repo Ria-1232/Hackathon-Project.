@@ -1,0 +1,12 @@
+// Get group ID from URL params
+const groupId = new URLSearchParams(window.location.search).get("groupId");
+
+document.getElementById("message-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const messageContent = document.getElementById("message-input").value;
+  sendMessage(groupId, messageContent);
+  document.getElementById("message-input").value = ""; // Clear input
+});
+
+// Start listening to messages
+listenForMessages(groupId);
